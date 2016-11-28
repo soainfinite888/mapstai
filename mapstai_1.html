@@ -1,0 +1,48 @@
+<head>
+
+<!--googlemaps Key-->
+<script src="../config/key.yml"
+
+type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<!--Google Map Åã¥Üªº¦ì¸m¡A¥i¦Û¥Ñ¨M©w¤j¤p-->
+<div id="mymap" style="width: 500px; height: 500px"></div>
+
+
+<script type="text/javascript">
+
+
+var map = new GMap(document.getElementById("mymap"));
+
+
+map.addControl(new GSmallMapControl());
+map.addControl(new GMapTypeControl());
+
+
+map.setCenter(new GLatLng(24.793845, 120.995559), 16);
+
+
+var point = new GLatLng(24.793845, 120.995559);
+var point2 = new GLatLng(24.793845, 120.995558);
+var marker = new GMarker(point);
+var marker2 = new GMarker(point2);
+
+
+map.addOverlay(marker2);
+map.addOverlay(marker);
+
+
+var html = "Weitai<br><br>  下大雨心情真不好<br>  不想做SOA作業";
+var html2 = "Weitai<br><br>  哈哈哈哈<br>  SOA作業好多多";
+map.openInfoWindowHtml (map.getCenter(), html);
+map.openInfoWindowHtml (map.getCenter(), html2);
+
+</script>
+
+<body>

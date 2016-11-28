@@ -1,0 +1,76 @@
+<head>
+
+<!--googlemaps Key-->
+<script src="KEY HERE"
+type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<!--Google Map Åã¥Üªº¦ì¸m¡A¥i¦Û¥Ñ¨M©w¤j¤p-->
+<div id="mymap" style="width: 500px; height: 500px"></div>
+
+
+<script type="text/javascript">
+
+
+var map = new GMap(document.getElementById("mymap"));
+
+
+map.addControl(new GSmallMapControl());
+map.addControl(new GMapTypeControl());
+
+
+map.setCenter(new GLatLng(24.793845, 120.995559), 16);
+/*
+
+var point = new GLatLng(24.793845, 120.995559);
+
+var marker = new GMarker(point);
+
+map.addOverlay(marker);
+
+var html = "Weitai<br><br>  下大雨心情真不好<br>  不想做SOA作業";
+map.openInfoWindowHtml (map.getCenter(), html);
+
+*/
+
+/*
+var bounds = map.getBounds();
+var southWest = bounds.getSouthWest();
+var northEast = bounds.getNorthEast();
+var lngSpan = northEast.lng() - southWest.lng();
+var latSpan = northEast.lat() - southWest.lat();
+*/
+
+
+var point = new GPoint(121.516900, 25.047795);
+var marker1 = new GMarker(point);
+var html1 = "台北火車站:<br>經度: 25.047795,<br>緯度: 121.516900";
+GEvent.addListener(marker1, "click", function() {
+marker1.openInfoWindowHtml(html1);
+});
+map.addOverlay(marker1);
+
+var point = new GPoint(121.521481, 25.034730);
+var marker2 = new GMarker(point);
+var html2 = "中正紀念堂:<br>經度: 25.034730,<br>緯度: 121.521481";
+GEvent.addListener(marker2, "click", function() {
+marker2.openInfoWindowHtml(html2);
+});
+map.addOverlay(marker2);
+
+var point = new GPoint(121.237371, 25.081479);
+var marker3 = new GMarker(point);
+var html3 = "桃園國際機場:<br>經度: 25.081479,<br>緯度: 121.237371";
+GEvent.addListener(marker3, "click", function() {
+marker3.openInfoWindowHtml(html3);
+});
+map.addOverlay(marker3);
+
+</script>
+
+<body>

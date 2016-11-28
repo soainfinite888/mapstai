@@ -1,0 +1,42 @@
+<head>
+
+<!--googlemaps Key-->
+<script src="KEY HERE"
+type="text/javascript"></script>
+
+</head>
+
+<body>
+
+
+
+<!--Google Map Åã¥Üªº¦ì¸m¡A¥i¦Û¥Ñ¨M©w¤j¤p-->
+<div id="mymap" style="width: 500px; height: 500px"></div>
+
+
+<script type="text/javascript">
+
+
+var map = new GMap(document.getElementById("mymap"));
+
+
+map.addControl(new GSmallMapControl());
+map.addControl(new GMapTypeControl());
+
+
+map.setCenter(new GLatLng(24.793845, 120.995559), 16);
+
+
+var point = new GLatLng(24.793845, 120.995559);
+
+var marker = new GMarker(point);
+
+map.addOverlay(marker);
+
+var html = "Weitai<br><br>  下大雨心情真不好<br>  不想做SOA作業";
+map.openInfoWindowHtml (map.getCenter(), html);
+
+
+</script>
+
+<body>
